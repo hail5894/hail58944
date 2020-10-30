@@ -1,0 +1,132 @@
+@media (max-width: 1500px) and (min-width: 1250px){
+  main .dc .dc1 .container .dc_main .dc_font{
+    left: 50%;
+  }
+  main .dc .dc2 .container .dc2_1 .left{
+    left:50%;
+  }
+  main .dc .dc3 .container .dc3_1 .fl{
+    left: 50%
+  }
+
+  main .dc .dc1 .container .dc_main .superman{
+    right: 10%;
+  }
+}
+
+@media (max-width: 1249px) and (min-width: 1024px){
+  main .dc .dc1 .container .dc_main .dc_font{
+    left: 60%;
+  }
+  main .dc .dc2 .container .dc2_1 .left{
+    left:60%;
+  }
+  main .dc .dc3 .container .dc3_1 .fl{
+    left: 60%
+  }
+  main .dc .dc1 .container .dc_main .superman{
+    right: 0%;
+  }
+
+}
+
+
+@media (max-width: 1500px) and (min-width: 1024px){
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+/* start */
+  /* header */
+  header div h1{
+    left:6%;
+  }
+  header div nav{padding-right: 5%;}
+  /* main */
+  main .dc .dc1 .container .dc_main .dc_font{
+    width: 80%;
+  }
+
+ 
+  main .dc .dc1 .container .dc_main3 div .dc_main3_1 .dc_main3_top{
+    width: 70%;
+  }
+  /* 조커가 선보이는 메뉴 */
+
+  main .dc .dc1 .container .dc_main3 div .dc_main3_1 .dc_main3_top .dc_tit .tit_1, main .dc .dc1 .container .dc_main3 div .dc_main3_1 .dc_main3_top .dc_tit2 .tit_1{
+    left: -20%;
+    top:-30%;
+  }
+
+  main .dc .dc1 .container .dc_main3 div .dc_main3_1 .dc_main3_top .dc_tit .tit_2, main .dc .dc1 .container .dc_main3 div .dc_main3_1 .dc_main3_top .dc_tit2 .tit_2{
+    right: -20%;
+    top: 90%;
+  }
+  main .dc .dc1 .container .dc_main3 div .dc_main3_1 .dc_main3_top .dc_tit .top, main .dc .dc1 .container .dc_main3 div .dc_main3_1 .dc_main3_top .dc_tit2 .top{
+    margin: 150px 0;
+  }
+
+  /* fact02 */
+  main .dc .dc2 .container .dc2_1 .left{
+    width: 100%;
+    transform: translateY(-30%);
+  }
+
+  main .dc .dc2 .container .dc2_2 .txt .round_box{
+    border-top: none;
+  }
+
+  /* fact3 */
+  main .dc .dc3 .container .dc3_1 .fl{
+    width: 90%;
+  }
+
+  main .dc .dc3 .container .dc3_1 .fl div p:nth-of-type(3),main .dc .dc3 .container .dc3_1 .fl div p:nth-of-type(4){
+    background: #f2f7f8;
+  }
+    /* 아이프레임 */
+    main .story .main_ytubeBox{
+      width: 80% !important;
+      margin: 0 auto;
+    }
+    main .story .main_ytubeBox iframe{
+     
+    }
+  
+    main .story .brand_area .container .ba_j{
+      width: 20%;
+    }
+    main .story .brand_area .container .ba_b{
+      width: 20%;   
+    }
+    main .story .story_area{
+      text-align: center;
+    }
+    main .story .brand_area{
+      text-align: center;
+    }
+
+    main .story .story_area .container .txt,main .story .brand_area .container .txt{
+      font-size: 22px;
+    }
+    main .story .brand_area .container .txt:nth-of-type(2){
+      width: 70%;margin: 0 auto;
+    }
+
+    .pop_bg{
+     /*  width: 50%; */
+      height: 1000px;
+      left: 0%;
+      top: 00%;
+    }
+    .pop_bg div iframe{width: 80% !important;margin: 0 auto;}
+    .pop_bg div{margin-left: 4%;}
+    .pop_bg div .x{
+     right:10%;
+      top: -20%;
+   
+    }
+    main .people .people_area .container{width: 100%;}
+  /* end */
+}

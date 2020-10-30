@@ -1,5 +1,4 @@
 
-//조커부인
 $(function () {
     //start
 
@@ -9,7 +8,7 @@ $(function () {
             width: '100%'
         }, 4000);
 
-        //글씨 옆으로 나와라
+        //fact 1 바로 시작할 수 있게끔
         $('.dc_font .dc_font_1 p').eq(0).animate({
             left: '0%'
         }, 1000, function () {
@@ -25,25 +24,50 @@ $(function () {
 
 
 
-    var top;
+    var top,a=1;
     function nav(e) {
-        //1
+       //조커부인
         top = $(window).scrollTop();
-        if ($('.dcm2_mid').offset().top - 200 < top) {
+        if ($('.dcm2_mid').offset().top - 200 < top && a) {
 
-            $('main .dc .dc1 .container .dc_main3 div .ba').animate({
+            $('main .dc .dc1 .container .dc_main3 div .ba').stop().animate({
                 top: '-10%',
                 left: '140%'
-            }, 2000);
+            },2000,function(){a=0});
             $('.dc_main3_1').show();
         }
 
-
+        //그래프 바 올라가게
         if ($('.left').offset().top - 200 < top) {
             $('.bg_bar').show();
         }
-        //2
-        if($('.dc_tit2').offset().top-100< top){
+      
+
+        //2.이것은 모바일 fact 2
+        if(window.innerWidth > 1500 && window.innerWidth < 1024){
+            if($('.dc_tit2').offset().top+100< top){
+            
+                $('.left p').eq(0).animate({
+                    left: '0%'
+                }, 1000, function () {
+                    $('.left p').eq(1).animate({
+                        left: '0%'
+                    }, 1000, function () {
+                        $('.left p').eq(2).animate({
+                            left: '0%'
+                        }, 1000,function(){
+                            $('.left p').eq(3).animate({
+                                left: '0%'
+                            }, 1000);
+                        });
+                    });
+                });   
+            }
+        }
+
+
+        //fact 2
+        if($('.dc_tit2').offset().top-200< top){
             
             $('.left p').eq(0).animate({
                 left: '0%'
@@ -62,7 +86,7 @@ $(function () {
             });   
         }
 
-        //3
+        //fact 3
         if($('.dc2_2').offset().top-200< top){
             
             $('.dc3_1 .fl div p').eq(0).animate({
@@ -113,12 +137,11 @@ window.addEventListener('DOMContentLoaded', function () {
             }
 
         });
-        //offsetTop 0부터 li top까지의 거리 1이나 2나 무조건 0부터
-        //브라우저 크기만큼만 알아서 offsetTop에서 빼준다
+      
     }
 });
 
-//slick
+//slick 소식 옆으로 이동
 $(function () {
     $('.s_v1').slick({
         dots: true,
@@ -135,7 +158,7 @@ $(function () {
 });
 
 
-//3
+//스크롤 a태그 불빛들어오고 누르면 그페이지로 이동
 window.addEventListener('DOMContentLoaded', function () {
     //start
     var navEl = document.querySelectorAll('.header nav a');
@@ -184,20 +207,9 @@ window.addEventListener('DOMContentLoaded', function () {
     //end   
 });
 
-//클릭 광고
+//팝업
 $(function () {
-    // $('.people_cf').on('click',function(e){
-    //     e.preventDefault();
-    //     var index= $(this).index();
-    //     $('.pop_bg').eq(index).show();
-    //     $('body').addClass('active');
-
-    //     $('.x').on('click',function(e){
-    //         e.preventDefault();
-    //         $('.pop_bg').eq(index).hide();
-    //         $('body').removeClass('active');
-    //     });
-    // });
+  
     $('.people_cf').on('click',function(e){
         e.preventDefault();
         var index= $(this).index();
@@ -222,3 +234,32 @@ $(function () {
   
 });
 
+$(function () {
+    $('.dc_tit .tit_1').show();
+   
+    $('.dc_tit2 .tit_1,.tit_2').hide();
+/* 위 */
+$('.dc_tit .dc_main3_top-1').eq(0).on('click',function(){
+    $(this).parents('.dc_tit').children('.tit_1').fadeIn(500);
+    $(this).children('p').fadeToggle();
+});
+    $('.dc_tit .dc_main3_top-1').eq(1).on('click',function(){
+        $(this).parents('.dc_tit').children('.tit_2').fadeIn(500);
+        $(this).children('p').fadeToggle();
+    });
+
+  
+/* 아래 */
+    $('.dc_tit2 .dc_main3_top-1').eq(0).on('click',function(){
+        $(this).parents('.dc_tit2').children('.tit_1').fadeIn(500);
+        $(this).children('p').fadeToggle();
+    });
+    $('.dc_tit2 .dc_main3_top-1').eq(1).on('click',function(){
+        $(this).parents('.dc_tit2').children('.tit_2').fadeIn(500);
+        $(this).children('p').fadeToggle();
+    });
+
+  
+
+
+});

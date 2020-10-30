@@ -308,14 +308,17 @@ main {
                     .tit {
                         h3 {
                             @include font(NotoSansKR, 32, #eee);
+                            span{padding-left: 10px;
+                                @include font(NotoSansKR, 14, #fd7405);}
                         }
-
+                        
                         font-weight: 700;
                         letter-spacing: -0.9px;
                         line-height: 1.5;
                         padding-left: 35px;
                         position: relative;
                     }
+               
                     div{
                         .dc_main3_1{
                             display: none;
@@ -355,12 +358,12 @@ main {
                                             left: 0%;
                                             top: -40%;
                                             display: none;
+                                            transition: 1s;
                                         }
                                     }
-        
-                                    .dc_main3_top-1:nth-of-type(1):hover p {
+                     .dc_main3_top-1:nth-of-type(1):hover p {
                                         display: block;
-                                    }
+                                    } 
         
                                     .dc_main3_top-1:nth-of-type(2) {
                                         position: relative;

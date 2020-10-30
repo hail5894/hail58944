@@ -342,6 +342,13 @@ main .dc .dc1 .container .dc_main3 .tit h3 {
   color: #eee;
 }
 
+main .dc .dc1 .container .dc_main3 .tit h3 span {
+  padding-left: 10px;
+  font-family: NotoSansKR;
+  font-size: 14px;
+  color: #fd7405;
+}
+
 main .dc .dc1 .container .dc_main3 div {
   /*    @keyframes aa {
                              50% {
@@ -430,6 +437,8 @@ main .dc .dc1 .container .dc_main3 div .dc_main3_1 .dc_main3_top .dc_tit .top .d
   left: 0%;
   top: -40%;
   display: none;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 main .dc .dc1 .container .dc_main3 div .dc_main3_1 .dc_main3_top .dc_tit .top .dc_main3_top-1:nth-of-type(1):hover p, main .dc .dc1 .container .dc_main3 div .dc_main3_1 .dc_main3_top .dc_tit2 .top .dc_main3_top-1:nth-of-type(1):hover p {
